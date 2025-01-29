@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanjayan - Engineering Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(120deg, #1a237e 0%, #283593 100%);
+        }
+        
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .skill-tag {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideUp 0.8s ease forwards;
+        }
+
+        @keyframes slideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #90caf9;
+        }
+
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(26, 35, 126, 0.9);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav class="navbar fixed w-full z-50 text-white py-4">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-xl font-bold">Sanjayan</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#education" class="nav-link">Education</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <button class="md:hidden">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="gradient-bg text-white py-20 pt-32">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold mb-4">Sanjayan</h1>
+            <p class="text-xl mb-6">Electronics & Communication Engineering Student</p>
+            <p class="text-lg opacity-90">Bridging Automotive and Electronics Engineering</p>
+        </div>
+    </header>
+
+    <!-- Education -->
+    <section id="education" class="container mx-auto px-6 py-16 section">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Education</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">B.E. in Electronics & Communication</h3>
+                <p class="text-gray-600">2nd Year Student</p>
+                <p class="text-gray-500 mt-2">Currently pursuing advanced studies in ECE</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-2">Diploma in Automobile Engineering</h3>
+                <p class="text-gray-600">Graduate</p>
+                <p class="text-gray-500 mt-2">Specialized in automotive systems and mechanics</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container mx-auto px-6 py-16 section">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Automobile Engineering</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Engine Diagnostics</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Vehicle Maintenance</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full">Automotive Electronics</span>
+                    <span class="skill-tag bg-blue-100 text-blue-800 px-3 py-1 rounded-full">CAD Design</span>
+                </div>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Electronics & Communication</h3>
+                <div class="flex flex-wrap gap-2">
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Circuit Design</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Digital Electronics</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Communication Systems</span>
+                    <span class="skill-tag bg-indigo-100 text-indigo-800 px-3 py-1 rounded-full">Microcontrollers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container mx-auto px-6 py-16 section">
+        <h2 class="text-3xl font-bold mb-8 text-gray-800">Featured Projects</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <div class="h-48 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+                    <img src="WhatsApp Image 2025-01-29 at 19.00.40_5de87d77.jpg" alt="APEX Racing" class="h-full w-full object-cover rounded-md"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Team Captain position at APEX racing</h3>
+                <p class="text-gray-600">Developing a full electric go kart</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <div class="h-48 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+                    <img src="https://www.arduinoproject.in/wp-content/uploads/2024/03/bms-project-1.webp" alt="Electric Vehicle Battery" class="h-full w-full object-cover rounded-md"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">EV Battery Management System</h3>
+                <p class="text-gray-600">Designed a battery management system for electric vehicles using modern electronics</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow-md">
+                <div class="h-48 bg-gray-200 rounded-md mb-4 flex items-center justify-center">
+                    <img src="https://hackster.imgix.net/uploads/attachments/1341249/0202020-1024x455.png?auto=compress%2Cformat&w=1280&h=960&fit=max" alt="Autonomous System" class="h-full w-full object-cover rounded-md"/>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Autonomous Parking Assistant</h3>
+                <p class="text-gray-600">Created a prototype parking assistance system using sensors and microcontrollers</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <footer id="contact" class="gradient-bg text-white py-12 mt-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold mb-4">Let's Connect</h2>
+            <p class="mb-4">Looking for opportunities to combine automotive and electronics expertise</p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-white text-blue-900 px-6 py-2 rounded-full hover:bg-blue-100 transition-colors">
+                    Contact Me
+                </button>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
